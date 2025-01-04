@@ -11,7 +11,6 @@ import { Badge } from "@/components/ui/badge"
 import { projects } from "./data/portfolio-data"
 import { personalInfo } from "./data/personal-info"
 import { TypeAnimation } from 'react-type-animation';
-import * as z from 'zod'
 import { ErrorBoundary } from 'react-error-boundary'
 import { ContactsSection } from "@/components/Contacts"
 import{ HouseIllustration } from "@/components/HouseIllustration";
