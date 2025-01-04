@@ -12,7 +12,6 @@ import { personalInfo } from '@/app/data/personal-info'
 import { useToast } from "@/hooks/use-toast" // Change this line
 import { Toaster } from "@/components/ui/toaster" // Add this line
 import emailjs from '@emailjs/browser';
-import { cn } from '@/lib/utils'
 
 // Update form data interface
 interface FormData {
@@ -65,7 +64,7 @@ export function ContactsSection() {
         })
       }
       setFormData({ name: '', email: '', message: '' })
-    } catch (error) {
+    } catch {
       toast({
         variant: "destructive",
         title: "Error",

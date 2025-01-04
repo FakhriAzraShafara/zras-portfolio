@@ -33,6 +33,7 @@ const NotFound = () => {
         <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-md text-center text-lg">
           The page you're looking for seems to have vanished into thin air.
         </p>
+        <p>Looks like you&apos;ve ventured into uncharted territory!</p>
         
         <div className="flex flex-col sm:flex-row gap-4">
           <button 

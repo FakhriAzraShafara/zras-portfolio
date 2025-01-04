@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export const UniverseIllustration = ({ side = "left" }: { side?: "left" | "right" }) => {
+export const UniverseIllustration = () => {
   return (
                 <div className="absolute right-0 top-0 w-1/2 h-auto opacity-90">
             <svg viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">

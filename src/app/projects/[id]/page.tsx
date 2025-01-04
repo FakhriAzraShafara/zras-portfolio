@@ -19,7 +19,6 @@ import { Project } from '@/types'
 export default function ProjectPage({ params }: { params: { id: string } }) {
   const project = projects.find(p => p.id === params.id) as Project | undefined
   const { scrollYProgress } = useScroll()
-  const y = useTransform(scrollYProgress, [0, 1], [0, 100])
 
   if (!project) {
     notFound()

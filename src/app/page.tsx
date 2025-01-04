@@ -4,13 +4,10 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useEffect, useState, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Mail, Phone, MapPin, Linkedin, Download, Send, ArrowUp, Github } from 'lucide-react'
-import { LinkedinIcon } from 'lucide-react'
+import { ArrowRight, Download, Send, ArrowUp, Github, Linkedin } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { projects } from "./data/portfolio-data"
 import { personalInfo } from "./data/personal-info"
 import { TypeAnimation } from 'react-type-animation';
@@ -59,31 +56,6 @@ export default function Home() {
       behavior: 'smooth'
     })
   }
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    },
-  })
-
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true)
-    try {
-      // Add your form submission logic here
-      await new Promise(resolve => setTimeout(resolve, 1000)) // Simulate API call
-      console.log(values)
-    } catch (error) {
-      console.error(error)
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
   const handleDownload = () => {
     const link = document.createElement('a')
     link.href = '/pdf/cv-Fakhri Azra Shafara.pdf'
@@ -126,7 +98,7 @@ export default function Home() {
       <HouseIllustration side="left" />
 
             {/* Right Side Illustration */}
-      <UniverseIllustration side="right" />
+      <UniverseIllustration/>
 
             {/* Animated Dots Grid */}
             <div className="absolute inset-0 bg-grid-pattern opacity-[0.05]" />
@@ -492,11 +464,11 @@ export default function Home() {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent">
-                Let's Connect
+                Let&apos;s Connect
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Have a project in mind or just want to chat? Feel free to reach out.
-                I'm always open to discussing new opportunities and ideas.
+                I&apos;m always open to discussing new opportunities and ideas.
               </p>
             </motion.div>
             <ContactsSection />

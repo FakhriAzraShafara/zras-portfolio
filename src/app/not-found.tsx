@@ -32,7 +32,7 @@ export default function NotFound() {
         Oops! Page Not Found
       </h2>
       <p className="text-muted-foreground mb-8 max-w-md">
-        Looks like you've ventured into the unknown! Don't worry, even ghosts get lost sometimes.
+        Looks like you&apos;ve ventured into the unknown! Don&apos;t worry, even ghosts get lost sometimes.
       </p>
       <div className="flex space-x-4">
         <Button asChild>
