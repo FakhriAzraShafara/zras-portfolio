@@ -1,5 +1,3 @@
-"use client"
-
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
@@ -16,11 +14,13 @@ import { projects } from "../../data/portfolio-data"
 import { MediaGallery } from "@/components/MediaGallery"
 import { Project } from '@/types'
 
-export default async function ProjectPage({ 
-  params 
-}: { 
-  params: { id: string } 
-}) {
+interface PageProps {
+  params: {
+    id: string;
+  }
+}
+
+export default function ProjectPage({ params }: PageProps) {
   const project = projects.find(p => p.id === params.id) as Project | undefined
 
   if (!project) {
