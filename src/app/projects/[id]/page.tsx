@@ -16,7 +16,11 @@ import { projects } from "../../data/portfolio-data"
 import { MediaGallery } from "@/components/MediaGallery"
 import { Project } from '@/types'
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
+export default async function ProjectPage({ 
+  params 
+}: { 
+  params: { id: string } 
+}) {
   const project = projects.find(p => p.id === params.id) as Project | undefined
 
   if (!project) {
