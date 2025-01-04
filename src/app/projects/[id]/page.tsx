@@ -3,7 +3,7 @@
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion, useScroll } from "framer-motion"
 import { 
   ArrowLeft,
   ExternalLink,
@@ -18,7 +18,6 @@ import { Project } from '@/types'
 
 export default function ProjectPage({ params }: { params: { id: string } }) {
   const project = projects.find(p => p.id === params.id) as Project | undefined
-  const { scrollYProgress } = useScroll()
 
   if (!project) {
     notFound()

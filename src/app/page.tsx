@@ -11,20 +11,11 @@ import { Badge } from "@/components/ui/badge"
 import { projects } from "./data/portfolio-data"
 import { personalInfo } from "./data/personal-info"
 import { TypeAnimation } from 'react-type-animation';
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 import { ErrorBoundary } from 'react-error-boundary'
 import { ContactsSection } from "@/components/Contacts"
 import{ HouseIllustration } from "@/components/HouseIllustration";
 import { UniverseIllustration } from "@/components/UniverseIllustration"
-
-const formSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters'),
-  email: z.string().email('Invalid email address'),
-  subject: z.string().min(5, 'Subject must be at least 5 characters'),
-  message: z.string().min(10, 'Message must be at least 10 characters'),
-})
 
 export default function Home() {
   const { scrollYProgress } = useScroll()
