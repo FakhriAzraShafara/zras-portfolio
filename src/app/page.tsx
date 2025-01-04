@@ -150,19 +150,19 @@ export default function Home() {
           </div>
 
           {/* Content */}
-          <div className="relative z-10 container mx-auto px-4 h-screen flex items-center justify-center min-h-screen">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-7xl w-full">
+          <div className="relative z-10 container mx-auto px-4 py-8 sm:py-12 md:py-16 h-screen flex items-center justify-center min-h-screen">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center max-w-7xl w-full">
               {/* Left side: Content */}
             {/* Left side: Content */}
             <motion.div
               style={{ y: textY, opacity }}
-              className="lg:col-span-7 text-left flex flex-col justify-center order-2 lg:order-1"
+              className="lg:col-span-7 text-left flex flex-col justify-center order-2 lg:order-1 px-4 sm:px-6 md:px-8"
             >
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary via-gray-400 to-accent-foreground"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-3 sm:mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary via-gray-400 to-accent-foreground"
               >
                 {personalInfo.name}
               </motion.h1>
@@ -171,7 +171,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-xl md:text-2xl text-muted-foreground mb-6"
+                className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 sm:mb-6"
               >
                 {personalInfo.title}
               </motion.p>
@@ -180,7 +180,7 @@ export default function Home() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="text-lg md:text-xl text-muted-foreground mb-8 h-32"
+                className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 h-24 sm:h-28 md:h-32"
               >
                 <TypeAnimation
                   sequence={[
@@ -208,7 +208,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="flex flex-wrap gap-4"
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4"
               >
                 <Link href="#contact" passHref>
                   <Button
@@ -250,7 +250,7 @@ export default function Home() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="flex mt-8 space-x-4"
+                className="flex mt-6 sm:mt-8 space-x-4"
               >
                 <motion.a
                   whileHover={{ scale: 1.1, rotateZ: 10 }}
@@ -284,7 +284,7 @@ export default function Home() {
                   ease: [0.6, -0.05, 0.01, 0.99]
                 }}
                 style={{ y: imageY, scale: imageScale }}
-                className="lg:col-span-5 relative w-full h-full max-w-md mx-auto flex items-center justify-center order-1 lg:order-2"
+                className="lg:col-span-5 relative w-full max-w-[280px] xs:max-w-[320px] sm:max-w-[380px] md:max-w-[420px] mx-auto flex items-center justify-center order-1 lg:order-2"
               >
                 {/* Image container with emergence effect */}
                 <motion.div 
@@ -366,7 +366,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 hidden sm:block"
           >
             <svg width="30" height="50" viewBox="0 0 30 50" className="text-primary">
               <motion.path
